@@ -93,7 +93,7 @@ namespace PhanLoaiTraiCam.Views
             Bitmap afterThreshold = afterSuppression.DoubleThreshold(100, 10);
             afterEdgeTrack = afterThreshold.EdgeTracking();
             Bitmap afterRestoration = afterEdgeTrack.BorderRestoration(3);
-            pic_GrayScale.Image = afterThreshold;
+            pic_GrayScale.Image = afterRestoration;
             // Phân ngưỡng ảnh xám để tách vùng đối tượng
             // Tạo bộ lọc liên kết để nối các điểm ảnh thành vùng
             BlobCounter blobCounter = new BlobCounter();
